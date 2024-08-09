@@ -19,4 +19,9 @@ class AdminController extends Controller
           {
             return view('admin.form');
           }
+
+          public function table()
+          {
+            return view('admin.table');
+          }
         }
