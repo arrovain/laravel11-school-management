@@ -38,6 +38,11 @@
   <label for="exampleInputEmail1">Enter Academic Year</label>
   <input name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
   </div>
+  @error('name')
+  
+  <p class="text-danger">{{$message}}</p>
+      
+  @enderror
   
   </div>
   
