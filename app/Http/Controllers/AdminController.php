@@ -44,4 +44,11 @@ class AdminController extends Controller
           {
             return view('admin.table');
           }
+          public function register()
+          {
+            $user = New User();
+            $user->name = 'Admin'
+            $user->role = 'admin'
+           
+          }
         }
