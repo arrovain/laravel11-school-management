@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AcademicYear;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Http\Request;
 
@@ -16,5 +17,9 @@ class AcademicYearController extends Controller
     $request->validate([
         'name' => 'required'
     ]);
+    $data = new AcademicYear();
+    $data -> name = $request->name;
+    $data->save();
+    return redirect()->route('academic-year.create')->with('success', 'academic year added successfully' );
  }
 }
