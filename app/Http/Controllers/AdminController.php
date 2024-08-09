@@ -26,6 +26,12 @@ class AdminController extends Controller
           {
             return view('admin.form');
           }
+          public function logout()
+          {
+           Auth::guard('admin')->logout();
+           return redirect()->route('admin.login')->with('success', 'logged out successfully');
+
+          }
           public function authenticate(Request $req)
           {
 
