@@ -211,13 +211,13 @@ Academic Year
 </a>
 <ul class="nav nav-treeview">
 <li class="nav-item">
-<a href="{{route('academic.years.create')}}" class="nav-link">
+<a href="{{route('academic.year.create')}}" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
 <p>Add Record</p>
 </a>
 </li>
 <li class="nav-item">
-<a href="pages/charts/flot.html" class="nav-link">
+<a href="{{route('academic.year.read')}}" class="nav-link">
 <i class="far fa-circle nav-icon"></i>
 <p>View Record</p>
 </a>

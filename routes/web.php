@@ -25,6 +25,7 @@ Route::get('academic-year/create', [AcademicYearController::class, 'index'])->na
 Route::post('academic-year/store', [AcademicYearController::class, 'index'])->name('academic-year.store');
 Route::get('academic-year/read', [AcademicYearController::class, 'index'])->name('academic-year.read');
 Route::get('academic-year/delete/{id}', [AcademicYearController::class, 'delete'])->name('academic-year.delete');
+Route::get('academic-year/edit/{id}', [AcademicYearController::class, 'edit'])->name('academic-year.edit');
     });
     
     
