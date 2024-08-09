@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class AcademicYearController extends Controller
 {
  public function index(){
-    return view('admin.academic_year')
+    return view('admin.academic_year');
  }
 }

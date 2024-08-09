@@ -34,8 +34,8 @@
   <form action="" method="post">
   <div class="card-body">
   <div class="form-group">
-  <label for="exampleInputEmail1">Email address</label>
-  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  <label for="exampleInputEmail1">Enter Academic Year</label>
+  <input name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
   </div>
   
   </div>
@@ -64,16 +64,3 @@
   </div>
 
   @endsection
-  @section('customJs')
-
-<script src="plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
-
-<script>
-$(function () {
-  bsCustomFileInput.init();
-});
-</script>
-</body>
-
-</html>
-@endsection
