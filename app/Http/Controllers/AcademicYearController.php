@@ -26,6 +26,6 @@ class AcademicYearController extends Controller
  public function read(){
     $data['academic_year'] = AcademicYear::get();
 
-    dd($data);
+    return view('admin.academic_year_list',$data);
  }
 }
