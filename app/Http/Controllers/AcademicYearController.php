@@ -22,4 +22,10 @@ class AcademicYearController extends Controller
     $data->save();
     return redirect()->route('academic-year.create')->with('success', 'academic year added successfully' );
  }
+
+ public function read(){
+    $data['academic_year'] = AcademicYear::get();
+
+    dd($data);
+ }
 }
