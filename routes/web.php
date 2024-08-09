@@ -22,6 +22,7 @@ Route::get('form', [AdminController::class, 'form'])->name('admin.form');
 Route::get('table', [AdminController::class, 'table'])->name('admin.table');
 Route::get('table', [AdminController::class, 'table'])->name('admin.table');
 Route::get('academic-year/create', [AcademicYearController::class, 'index'])->name('academic-year.create');
+Route::post('academic-year/store', [AcademicYearController::class, 'index'])->name('academic-year.store');
     });
     
     
