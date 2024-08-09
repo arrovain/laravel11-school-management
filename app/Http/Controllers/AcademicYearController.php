@@ -10,4 +10,11 @@ class AcademicYearController extends Controller
  public function index(){
     return view('admin.academic_year');
  }
+
+
+ public function store(Request $request){
+    $request->validate([
+        'name' => 'required'
+    ]);
+ }
 }
