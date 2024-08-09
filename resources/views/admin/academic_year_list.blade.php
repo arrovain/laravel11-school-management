@@ -49,13 +49,12 @@
 <tbody>
     @foreach($academic_year as $item)
 <tr>
-<td>Trident</td>
-<td>Internet
-Explorer 4.0
-</td>
-<td>Win 95+</td>
-<td> 4</td>
-<td>X</td>
+<td>{{$item->id}}</td>
+<td>{{$item->name}}</td>$i
+<td>{{$item->created_at}}</td>
+<td><a href="" class="btn btn-primary"> Edit</a></td>
+<td><a href="" class="btn btn-danger"> Delete</a></td>
+
 </tr>
 
 @endfor
