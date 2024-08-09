@@ -26,6 +26,12 @@
   <div class="col-md-12">
   
   <div class="card card-primary">
+    @if (Session::has('success'))
+    <div class="alert alert-success">
+        {{Session::get('success')}}
+    </div>
+        
+    @endif
   <div class="card-header">
   <h3 class="card-title">Add Academic Year</h3>
   </div>
