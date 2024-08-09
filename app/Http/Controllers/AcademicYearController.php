@@ -34,4 +34,11 @@ class AcademicYearController extends Controller
     $data->delete();
     return redirect()->route('academic-year.read')->with('success', 'academic year deleted successfully' );
  }
+
+
+ public function edit($id){
+   $data['academic_year'] = AcademicYear::find($id);
+   return view('admin.edit_academic_year');
+
+ }
 }
