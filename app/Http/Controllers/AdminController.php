@@ -40,7 +40,7 @@ class AdminController extends Controller
                     Auth::guard('admin')->logout();
                     return redirect()->route('admin.login')->with('error','unautherise user, access denied');
                 }
-
+                return redirect()->route('admin.dashboard');
             }
             else {
                 return redirect()->route('admin.login')->with('error','something went wrong');
