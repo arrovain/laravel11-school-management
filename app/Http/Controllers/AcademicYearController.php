@@ -7,9 +7,7 @@ use Illuminate\Http\Request;
 
 class AcademicYearController extends Controller
 {
-    use HasFactory;
-    protected $fillable = [
-        'name',
-       
-    ];
+ public function index(){
+    return view('admin.academic_year')
+ }
 }
