@@ -31,6 +31,12 @@
 
 
 <div class="card">
+    @if (Session::has('success'))
+    <div class="alert alert-success">
+        {{Session::get('success')}}
+    </div>
+        
+    @endif
 <div class="card-header">
 <h3 class="card-title">DataTable with default features</h3>
 </div>
@@ -53,11 +59,11 @@
 <td>{{$item->name}}</td>$i
 <td>{{$item->created_at}}</td>
 <td><a href="" class="btn btn-primary"> Edit</a></td>
-<td><a href="" class="btn btn-danger"> Delete</a></td>
+<td><a href="{{route('academic-year.delete',->$item->id)}}" onclick="returnconfirm('are you sure want to delete?')" class="btn btn-danger"> Delete</a></td>
 
 </tr>
 
-@endfor
+@endforeach
 
 <tr>
 <td>Misc</td>
