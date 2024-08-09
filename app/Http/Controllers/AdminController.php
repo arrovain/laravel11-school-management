@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Container\Attributes\Auth;
 use Illuminate\Contracts\Auth\Guard;
-
 use Illuminate\Http\Request;
 
 
@@ -47,8 +47,10 @@ class AdminController extends Controller
           public function register()
           {
             $user = New User();
-            $user->name = 'Admin'
-            $user->role = 'admin'
+            $user->name = 'Admin';
+            $user->role = 'admin';
+            $user->email = 'admin@gmail.com';
+            $user->password = Hash::make('admin');
            
           }
         }
