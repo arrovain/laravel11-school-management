@@ -21,6 +21,11 @@ class AdminController extends Controller
           }
           public function authenticate(Request $req)
           {
+
+            $req->validate([
+                'email'=>'required',
+                'password'=>'required'
+            ]);
             dd($req->all());
           }
 
