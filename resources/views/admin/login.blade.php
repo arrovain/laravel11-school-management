@@ -33,6 +33,11 @@
 <div class="input-group-text">
 <span class="fas fa-envelope"></span>
 </div>
+@error('name')
+<p class="text-danger">    {{ $message}}
+
+</p>
+@enderror
 </div>
 </div>
 <div class="input-group mb-3">
@@ -41,6 +46,11 @@
 <div class="input-group-text">
 <span class="fas fa-lock"></span>
 </div>
+@error('name')
+<p class="text-danger">    {{ $message}}
+
+</p>
+@enderror
 </div>
 </div>
 <div class="row">
