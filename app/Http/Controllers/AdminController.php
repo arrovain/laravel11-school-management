@@ -19,6 +19,10 @@ class AdminController extends Controller
           {
             return view('admin.form');
           }
+          public function authenticate(Request $req)
+          {
+            dd($req->all());
+          }
 
           public function table()
           {
