@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Container\Attributes\Auth;
+use Illuminate\Contracts\Auth\Guard;
+
 use Illuminate\Http\Request;
+
+
 
 class AdminController extends Controller
 {
@@ -26,7 +31,13 @@ class AdminController extends Controller
                 'email'=>'required',
                 'password'=>'required'
             ]);
-            dd($req->all());
+            if(Auth::guard('admin')->attempt(['email'=>$req->email,'password'=>$req->password]))
+            {
+
+            }
+            else {
+                return redirect()->route('admin.login')->with('error','something went wrong');
+            }
           }
 
           public function table()
