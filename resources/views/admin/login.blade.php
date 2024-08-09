@@ -20,7 +20,22 @@
 <div class="login-box">
 
 <div class="card card-outline card-primary">
+    
 <div class="card-header text-center">
+    @if (Session::has('success'))
+    <div class="alert alert-success">
+        {{Session::get('success')}}
+    </div>
+    @endif
+    @if (Session::has('error'))
+    <div class="alert alert-danger">
+        {{Session::get('error')}}
+    </div>
+            @endif   
+
+    
+    
+
 <a href="../../index2.html" class="h1"><b>Admin</b>LTE</a>
 </div>
 <div class="card-body">
