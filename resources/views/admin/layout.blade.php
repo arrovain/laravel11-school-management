@@ -25,6 +25,7 @@
 <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
 
 <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+@yield('customCss')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -888,6 +889,7 @@ All rights reserved.
 <script src="dist/js/demo.js"></script>
 
 <script src="dist/js/pages/dashboard.js"></script>
+@yield('customJs')
 </body>
 
 <!-- Mirrored from adminlte.io/themes/v3/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 May 2024 05:16:08 GMT -->
