@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Container\Attributes\Auth;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+
 
 
 
@@ -34,6 +36,11 @@ class AdminController extends Controller
             if(Auth::guard('admin')->attempt(['email'=>$req->email,'password'=>$req->password]))
             {
 
+                if(Auth::guard('admin')->user()->role != 'admin'){
+                    Auth::guard('admin')->logout();
+                    return redirect()->route('admin.login')->with('error','unautherise user, access denied');
+                }
+
             }
             else {
                 return redirect()->route('admin.login')->with('error','something went wrong');
@@ -51,6 +58,7 @@ class AdminController extends Controller
             $user->role = 'admin';
             $user->email = 'admin@gmail.com';
             $user->password = Hash::make('admin');
+            $user->save();
             return redirect()->route('admin.login')->with('success', 'user created successfully');
 
           }
