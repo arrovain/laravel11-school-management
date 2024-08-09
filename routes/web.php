@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AcademicYearController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,8 @@ Route::post('login', [AdminController::class, 'authenticate'])->name('admin.auth
         Route::get('dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 Route::get('form', [AdminController::class, 'form'])->name('admin.form');
 Route::get('table', [AdminController::class, 'table'])->name('admin.table');
+Route::get('table', [AdminController::class, 'table'])->name('admin.table');
+Route::get('academic-year/create', [AcademicYearController::class, 'index'])->name('academic-year.create');
     });
     
     
