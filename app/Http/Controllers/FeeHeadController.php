@@ -11,4 +11,10 @@ class FeeHeadController extends Controller
     public function index(){
         return view('admin.fee-head.fee-head');
     }
+
+    public function store(Request $request){
+
+        echo "ok";
+
+    }
 }
