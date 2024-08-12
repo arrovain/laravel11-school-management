@@ -38,7 +38,7 @@ class AcademicYearController extends Controller
 
  public function edit($id){
    $data['academic_year'] = AcademicYear::find($id);
-   return view('admin.edit_academic_year');
+   return view('admin.edit_academic_year', $data);
 
  }
 }
