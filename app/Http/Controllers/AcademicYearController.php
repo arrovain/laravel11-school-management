@@ -41,4 +41,10 @@ class AcademicYearController extends Controller
    return view('admin.edit_academic_year', $data);
 
  }
+
+
+public function update (Request $request){
+
+ }
+
 }
