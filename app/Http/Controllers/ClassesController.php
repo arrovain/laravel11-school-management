@@ -38,7 +38,17 @@ public function update (Request $request){
     $data = Classes::find($request->id);
     $data->name = $request->name; 
     $data->update();  
-    return redirect()->route('class.update')->with('success', 'Class updated successfully' );
+    return redirect()->route('class.update')->with('success', 'Class updated sauccessfully' );
+
+}
+
+
+public function delete($id)
+{
+    $data = Classes::find($id);
+    $data-> delete();
+    return redirect()->route('class.delete')->with('success', 'Class deleted successfully' );
+
 
 }
 
