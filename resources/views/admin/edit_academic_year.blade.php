@@ -37,7 +37,7 @@
   </div>
   
   
-  <form action="{{route('academic-year.store')}}" method="post">
+  <form action="{{route('academic-year.update')}}" method="post">
     @csrf
   <div class="card-body">
   <div class="form-group">
