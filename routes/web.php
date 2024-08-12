@@ -31,6 +31,7 @@ Route::get('academic-year/edit/{id}', [AcademicYearController::class, 'edit'])->
 Route::get('academic-year/update/{id}', [AcademicYearController::class, 'update'])->name('academic-year.update');
 
 Route::get('class/create', [ClassesController::class, 'index'])->name('class.create');
+Route::post('class/store', [ClassesController::class, 'store'])->name('class.store');
     });
     
     
