@@ -12,7 +12,7 @@
   <div class="col-sm-6">
   <ol class="breadcrumb float-sm-right">
   <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">Home</a></li>
-  <li class="breadcrumb-item active">AcademicYear</li>
+  <li class="breadcrumb-item active">Edit Class</li>
   </ol>
   </div>
   </div>
@@ -33,16 +33,17 @@
         
     @endif
   <div class="card-header">
-  <h3 class="card-title">Enter Class Name</h3>
+  <h3 class="card-title">Update Class</h3>
   </div>
   
   
-  <form action="{{route('class.store')}}" method="post">
+  <form action="{{route('class.update')}}" method="post">
     @csrf
   <div class="card-body">
+    <input type="hidden" name="id" value="{{$class->id}}"/>
   <div class="form-group">
   <label for="exampleInputEmail1">Enter Class Name</label>
-  <input name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter class name">
+  <input name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter class name" value="{{old('name, $class->name')}}">
   </div>
   @error('name')
   
