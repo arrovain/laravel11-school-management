@@ -193,7 +193,7 @@ Nora Silvester
 
 
 <li class="nav-item">
-<a href="pages/widgets.html" class="nav-link">
+<a href="{{route('admin.dashboard')}}" class="nav-link">
 <i class="nav-icon fas fa-th"></i>
 <p>
 Dashboard
