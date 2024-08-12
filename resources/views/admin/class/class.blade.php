@@ -42,7 +42,7 @@
   <div class="card-body">
   <div class="form-group">
   <label for="exampleInputEmail1">Enter Class Name</label>
-  <input name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  <input name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter class name">
   </div>
   @error('name')
   
