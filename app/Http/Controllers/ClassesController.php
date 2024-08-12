@@ -38,6 +38,8 @@ public function update (Request $request){
     $data = Classes::find($request->id);
     $data->name = $request->name; 
     $data->update();  
+    return redirect()->route('class.update')->with('success', 'Class updated successfully' );
+
 }
 
 
