@@ -39,6 +39,7 @@
   
   <form action="{{route('academic-year.update')}}" method="post">
     @csrf
+    <input type='hidden' name="id" value="{{$academic_year->id}}" />
   <div class="card-body">
   <div class="form-group">
   <label for="exampleInputEmail1">Enter Academic Year</label>
