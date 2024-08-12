@@ -45,6 +45,11 @@ class AcademicYearController extends Controller
 
 public function update (Request $request){
 
+   $data =AcademicYear::find($request->id);
+   $data->name = $request->name;
+   $data->update();
+   return redirect()->route('academic-year.read')->with('success','Academic Year Deleted Succesfully');
+
  }
 
 }
