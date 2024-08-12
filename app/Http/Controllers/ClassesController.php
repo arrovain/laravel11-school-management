@@ -33,5 +33,14 @@ public function edit ($id){
     return view('admin.class.edit_class', $data);
 }
 
+public function update (Request $request){
+
+    $data = Classes::find($request->id);
+    $data->name = $request->name; 
+    $data->update();  
+}
+
+
+
 }
 
