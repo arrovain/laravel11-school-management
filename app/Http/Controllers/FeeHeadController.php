@@ -23,13 +23,18 @@ class FeeHeadController extends Controller
 
         ]
         );
-
+  
         $fee = new FeeHead();
         $fee->name=$request->name;
         $fee->save();
         return redirect()->route('fee-head.create'->with('success','Fee Head added successfully'));
+    }
 
 
+    public function read(){
+
+        $data['fee'] = FeeHead::latest()->get();
+        return view('admin.fee-head.fee-headlist', $data);
 
     }
   
