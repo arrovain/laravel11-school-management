@@ -52,4 +52,10 @@ class FeeHeadController extends Controller
 
     }
   
+    public function delete($id){
+        $fee = FeeHead::find($id);
+        $fee->delete();
+        return redirect()->back()->with('success','Fee Head deleted successfully');
+
+
 }
