@@ -53,13 +53,14 @@
 </tr>
 </thead>
 <tbody>
-    @foreach($fee as $item)
+@foreach($fee as $item)
 <tr>
 <td>{{$item->id}}</td>
 <td>{{$item->name}}</td>$i
 <td>{{$item->created_at}}</td>
 <td><a href="" class="btn btn-primary"> Edit</a></td>
-<td><a href="{{route('academic-year.delete',->$item->id)}}" onclick="returnconfirm('are you sure want to delete?')" class="btn btn-danger"> Delete</a></td>
+<td><a href="{{route('fee-head.edit',->$item->id)}}" onclick="returnconfirm('are you sure want to edit?')" class="btn btn-danger"> edit</a></td>
+<td><a href="{{route('fee-head.delete',->$item->id)}}" onclick="returnconfirm('are you sure want to delete?')" class="btn btn-danger"> Delete</a></td>
 
 </tr>
 
