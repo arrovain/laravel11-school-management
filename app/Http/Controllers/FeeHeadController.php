@@ -14,7 +14,12 @@ class FeeHeadController extends Controller
 
     public function store(Request $request){
 
-        echo "ok";
+      $request->validate(
+        [
+            'name' => 'required'
+        ]
+        );
 
     }
+  
 }
