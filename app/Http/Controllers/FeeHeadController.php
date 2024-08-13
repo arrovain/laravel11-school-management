@@ -43,5 +43,9 @@ class FeeHeadController extends Controller
         return view('admin.fee-head.edit-fee-head', $data);
 
     }
+    public function update(Request $request)
+    {
+        $fee = FeeHead::find($request->id)
+    }
   
 }

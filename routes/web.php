@@ -42,6 +42,7 @@ Route::get('fee-head/create', [FeeHeadController::class, 'index'])->name('fee-he
 Route::post('fee-head/store', [FeeHeadController::class, 'store'])->name('fee-head.store');
 Route::get('fee-head/read', [FeeHeadController::class, 'read'])->name('fee-head.read');
 Route::get('fee-head/edit', [FeeHeadController::class, 'edit'])->name('fee-head.edit');
+Route::post('fee-head/update', [FeeHeadController::class, 'update'])->name('fee-head.update');
 
     
     
