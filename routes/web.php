@@ -40,6 +40,7 @@ Route::get('class/delete{id}', [ClassesController::class, 'delete'])->name('clas
 
 Route::get('fee-head/create', [FeeHeadController::class, 'index'])->name('fee-head.create');
 Route::post('fee-head/store', [FeeHeadController::class, 'store'])->name('fee-head.store');
+Route::get('fee-head/read', [FeeHeadController::class, 'store'])->name('fee-head.read');
 
     
     

@@ -6,6 +6,8 @@ use App\Models\FeeHead;
 use Illuminate\Http\Request;
 
 
+
+
 class FeeHeadController extends Controller
 {
     public function index(){
@@ -17,8 +19,17 @@ class FeeHeadController extends Controller
       $request->validate(
         [
             'name' => 'required'
+
+
         ]
         );
+
+        $fee = new FeeHead();
+        $fee->name=$request->name;
+        $fee->save();
+        return redirect()->route('fee-head.create'->with('success','Fee Head added successfully'));
+
+
 
     }
   
