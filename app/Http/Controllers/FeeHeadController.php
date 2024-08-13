@@ -45,7 +45,11 @@ class FeeHeadController extends Controller
     }
     public function update(Request $request)
     {
-        $fee = FeeHead::find($request->id)
+        $fee = FeeHead::find($request->id);
+        $fee->name =  $request->name;
+        $fee->update();
+        return redirect()->route('fee-head.read'->with('success','Fee Head updated successfully'));
+
     }
   
 }
